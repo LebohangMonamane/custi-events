@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Custi Events</title>
+  <meta name="description" content="Get in touch with the Custi Events team. We're here to help with your event management questions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 64px;
+      align-items: flex-start;
+    }
+    .contact-info h2 { margin-bottom: 16px; }
+    .contact-info p { margin-bottom: 32px; }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .contact-item-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--primary-light);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .contact-item-body strong { display: block; color: var(--dark); font-size: 0.9rem; margin-bottom: 4px; }
+    .contact-item-body span { font-size: 0.875rem; color: var(--text-muted); }
+    @media (max-width: 768px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><i class="fa-solid fa-calendar-days"></i></div>
+      Custi Events
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="demo.html" class="btn btn-outline btn-sm">Request Demo</a>
+      <a href="https://app.custi.africa" class="btn btn-primary btn-sm" target="_blank">Login / Sign Up</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-actions">
+      <a href="demo.html" class="btn btn-outline">Request Demo</a>
+      <a href="https://app.custi.africa" class="btn btn-primary" target="_blank">Login / Sign Up</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Get in Touch</h1>
+    <p>Have a question or need help? We'd love to hear from you.</p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <div class="contact-info">
+        <h2>We're Here to Help</h2>
+        <p>Whether you have a question about features, pricing, or need support with your event — our team is ready to assist.</p>
+
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-item-body">
+            <strong>Email</strong>
+            <span>hello@custi.africa</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="contact-item-body">
+            <strong>WhatsApp Support</strong>
+            <span>Message us on WhatsApp for quick responses</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-globe"></i></div>
+          <div class="contact-item-body">
+            <strong>Website</strong>
+            <span>event.custi.africa</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-clock"></i></div>
+          <div class="contact-item-body">
+            <strong>Response Time</strong>
+            <span>We typically respond within 24 hours</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 32px;">
+          <a href="demo.html" class="btn btn-outline">Request a Demo Instead</a>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3 style="margin-bottom: 8px; color: var(--dark);">Send Us a Message</h3>
+        <p style="margin-bottom: 28px; font-size: 0.9rem;">Fill in the form and we'll get back to you shortly.</p>
+        <form data-form="contact">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a topic…</option>
+              <option>General Enquiry</option>
+              <option>Pricing Question</option>
+              <option>Technical Support</option>
+              <option>Partnership</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us how we can help…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg form-submit">Send Message</button>
+          <p class="form-note">We respect your privacy and will never share your information.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to Start Your Event?</h2>
+    <p>Sign up and create your first event for free — no credit card required.</p>
+    <div class="cta-actions">
+      <a href="https://app.custi.africa/register" class="btn btn-primary btn-lg" target="_blank">Start Event Setup</a>
+      <a href="pricing.html" class="btn btn-ghost btn-lg">View Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon"><i class="fa-solid fa-calendar-days"></i></div>
+          Custi Events
+        </a>
+        <p>The WhatsApp-first event management platform for organisers.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="contact.html">Contact</a>
+        <a href="demo.html">Request Demo</a>
+      </div>
+      <div class="footer-col">
+        <h4>Portal</h4>
+        <a href="https://app.custi.africa" target="_blank">Login</a>
+        <a href="https://app.custi.africa/register" target="_blank">Sign Up</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Custi Events. All rights reserved.</span>
+      <span>event.custi.africa</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

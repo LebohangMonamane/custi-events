@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Custi Events</title>
+  <meta name="description" content="Simple, transparent pricing for Custi Events. Free for up to 10 guests. R10 per guest for larger events." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .pricing-compare {
+      max-width: 860px;
+      margin: 64px auto 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .compare-header {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      background: var(--dark);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.875rem;
+    }
+    .compare-header div, .compare-row div { padding: 16px 20px; }
+    .compare-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .compare-row:nth-child(even) { background: #f8fafc; }
+    .compare-row div:not(:first-child) { text-align: center; font-weight: 600; }
+    .yes { color: var(--primary); }
+    .no { color: #cbd5e0; }
+    .compare-header div:not(:first-child) { text-align: center; }
+    .faq { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 600; color: var(--dark); margin-bottom: 10px; font-size: 1rem; }
+    .faq-a { font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><i class="fa-solid fa-calendar-days"></i></div>
+      Custi Events
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="demo.html" class="btn btn-outline btn-sm">Request Demo</a>
+      <a href="https://app.custi.africa" class="btn btn-primary btn-sm" target="_blank">Login / Sign Up</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-actions">
+      <a href="demo.html" class="btn btn-outline">Request Demo</a>
+      <a href="https://app.custi.africa" class="btn btn-primary" target="_blank">Login / Sign Up</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Simple, Transparent Pricing</h1>
+    <p>Start for free. Scale as your event grows. No hidden fees.</p>
+  </div>
+</section>
+
+<!-- PRICING CARDS -->
+<section class="section">
+  <div class="container">
+    <div class="pricing-grid">
+
+      <!-- FREE TIER -->
+      <div class="pricing-card">
+        <div class="pricing-tier">Free Tier</div>
+        <h3>Small Events</h3>
+        <div class="pricing-price">
+          <span class="free-label">Free</span>
+        </div>
+        <p class="pricing-desc">Perfect for intimate gatherings of up to 10 guests. Full WhatsApp-powered experience at no cost.</p>
+        <ul class="pricing-features">
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> Up to 10 guests</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> Event setup wizard</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> WhatsApp invitation messages</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> RSVP via WhatsApp</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> Organiser portal access</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> Seating management</li>
+        </ul>
+        <div class="pricing-bundle">
+          <strong><i class="fa-brands fa-whatsapp"></i> Optional Message Bundle</strong>
+          50 additional messages for R35
+        </div>
+        <a href="https://app.custi.africa/register" class="btn btn-outline" target="_blank">Get Started Free</a>
+      </div>
+
+      <!-- PAID TIER -->
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier">Paid Tier</div>
+        <h3>Larger Events</h3>
+        <div class="pricing-price">
+          <span class="amount">R10</span>
+          <span class="unit"> / guest</span>
+        </div>
+        <p class="pricing-desc">For events with more than 10 guests. Includes 4 WhatsApp messages per guest in the base price.</p>
+        <ul class="pricing-features">
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> Unlimited guests</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> Event setup wizard</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> 4 messages per guest included</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> RSVP via WhatsApp</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> Organiser portal access</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> Seating management</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> Announcements &amp; broadcasts</li>
+          <li><span class="check"><i class="fa-solid fa-check"></i></span> Priority support</li>
+        </ul>
+        <div class="pricing-bundle">
+          <strong><i class="fa-brands fa-whatsapp"></i> Optional Message Bundle</strong>
+          50 additional messages for R30
+        </div>
+        <a href="https://app.custi.africa/register" class="btn btn-primary" target="_blank">Start Event Setup</a>
+      </div>
+
+    </div>
+
+    <!-- COMPARISON TABLE -->
+    <div class="pricing-compare">
+      <div class="compare-header">
+        <div>Feature</div>
+        <div>Free (≤10 guests)</div>
+        <div>Paid (&gt;10 guests)</div>
+      </div>
+      <div class="compare-row">
+        <div>Event setup wizard</div>
+        <div class="yes"><i class="fa-solid fa-check"></i></div>
+        <div class="yes"><i class="fa-solid fa-check"></i></div>
+      </div>
+      <div class="compare-row">
+        <div>WhatsApp invitation messages</div>
+        <div class="yes"><i class="fa-solid fa-check"></i></div>
+        <div class="yes"><i class="fa-solid fa-check"></i></div>
+      </div>
+      <div class="compare-row">
+        <div>RSVP via WhatsApp</div>
+        <div class="yes"><i class="fa-solid fa-check"></i></div>
+        <div class="yes"><i class="fa-solid fa-check"></i></div>
+      </div>
+      <div class="compare-row">
+        <div>Seating management</div>
+        <div class="yes"><i class="fa-solid fa-check"></i></div>
+        <div class="yes"><i class="fa-solid fa-check"></i></div>
+      </div>
+      <div class="compare-row">
+        <div>Messages included per guest</div>
+        <div><i class="fa-solid fa-minus" style="color:#cbd5e0;"></i></div>
+        <div class="yes">4 messages</div>
+      </div>
+      <div class="compare-row">
+        <div>Announcements &amp; broadcasts</div>
+        <div><i class="fa-solid fa-minus" style="color:#cbd5e0;"></i></div>
+        <div class="yes"><i class="fa-solid fa-check"></i></div>
+      </div>
+      <div class="compare-row">
+        <div>Optional message bundle</div>
+        <div>50 msgs / R35</div>
+        <div>50 msgs / R30</div>
+      </div>
+      <div class="compare-row">
+        <div>Price</div>
+        <div class="yes">Free</div>
+        <div class="yes">R10 / guest</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-sm" style="background: #f8fafc;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">FAQ</span>
+      <h2>Pricing Questions Answered</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">When does the paid tier kick in?</div>
+        <div class="faq-a">The paid tier applies when your event has more than 10 guests. Events with 10 or fewer guests are completely free.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What counts as a "message"?</div>
+        <div class="faq-a">Each WhatsApp message sent to a guest counts as one message. The paid tier includes 4 messages per guest in the base price of R10/guest. Additional messages can be purchased in bundles of 50.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is there a monthly subscription fee?</div>
+        <div class="faq-a">No. Custi Events is priced per event, per guest. You only pay for what you use — no recurring subscription fees.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I upgrade from free to paid mid-event?</div>
+        <div class="faq-a">Yes. If your guest list grows beyond 10, the system will prompt you to upgrade. Your event data and settings are preserved.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What payment methods are accepted?</div>
+        <div class="faq-a">We support major payment methods. Contact us or request a demo for details on payment options available in your region.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Start Free. Scale When You're Ready.</h2>
+    <p>No credit card required for your first event. Get started in minutes.</p>
+    <div class="cta-actions">
+      <a href="https://app.custi.africa/register" class="btn btn-primary btn-lg" target="_blank">Start Event Setup</a>
+      <a href="demo.html" class="btn btn-ghost btn-lg">Request Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon"><i class="fa-solid fa-calendar-days"></i></div>
+          Custi Events
+        </a>
+        <p>The WhatsApp-first event management platform for organisers.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="contact.html">Contact</a>
+        <a href="demo.html">Request Demo</a>
+      </div>
+      <div class="footer-col">
+        <h4>Portal</h4>
+        <a href="https://app.custi.africa" target="_blank">Login</a>
+        <a href="https://app.custi.africa/register" target="_blank">Sign Up</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Custi Events. All rights reserved.</span>
+      <span>event.custi.africa</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

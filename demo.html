@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Demo — Custi Events</title>
+  <meta name="description" content="Request a personalised demo of Custi Events. See how WhatsApp-first event management works for your organisation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .demo-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 64px;
+      align-items: flex-start;
+    }
+    .demo-info h2 { margin-bottom: 16px; }
+    .demo-info p { margin-bottom: 24px; }
+    .demo-points { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
+    .demo-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .demo-point-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .demo-point-body strong { display: block; color: var(--dark); font-size: 0.9rem; }
+    .demo-point-body span { font-size: 0.85rem; color: var(--text-muted); }
+    @media (max-width: 768px) {
+      .demo-layout { grid-template-columns: 1fr; gap: 40px; }
+    }
+  </style>
+  <style>
+    .field-error { color: #dc3545; font-size: 0.8rem; margin-top: 4px; display: block; }
+    .input-error { border-color: #dc3545 !important; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><i class="fa-solid fa-calendar-days"></i></div>
+      Custi Events
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="demo.html" class="btn btn-outline btn-sm">Request Demo</a>
+      <a href="https://app.custi.africa" class="btn btn-primary btn-sm" target="_blank">Login / Sign Up</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-actions">
+      <a href="demo.html" class="btn btn-outline">Request Demo</a>
+      <a href="https://app.custi.africa" class="btn btn-primary" target="_blank">Login / Sign Up</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>See Custi Events in Action</h1>
+    <p>Get a personalised walkthrough of the platform tailored to your event type and needs.</p>
+  </div>
+</section>
+
+<!-- DEMO SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="demo-layout">
+
+      <div class="demo-info">
+        <h2>What to Expect in Your Demo</h2>
+        <p>Our team will walk you through the full Custi Events experience — from event creation to guest communication on WhatsApp.</p>
+
+        <div class="demo-points">
+          <div class="demo-point">
+            <div class="demo-point-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <div class="demo-point-body">
+              <strong>Event Setup Walkthrough</strong>
+              <span>See how to create and configure an event in minutes</span>
+            </div>
+          </div>
+          <div class="demo-point">
+            <div class="demo-point-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="demo-point-body">
+              <strong>Live WhatsApp Demo</strong>
+              <span>Experience the guest RSVP flow on a real WhatsApp number</span>
+            </div>
+          </div>
+          <div class="demo-point">
+            <div class="demo-point-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <div class="demo-point-body">
+              <strong>Portal Overview</strong>
+              <span>Tour the organiser portal — guest management, seating, messaging</span>
+            </div>
+          </div>
+          <div class="demo-point">
+            <div class="demo-point-icon"><i class="fa-solid fa-tag"></i></div>
+            <div class="demo-point-body">
+              <strong>Pricing Clarity</strong>
+              <span>Get a clear breakdown of costs for your specific event size</span>
+            </div>
+          </div>
+          <div class="demo-point">
+            <div class="demo-point-icon"><i class="fa-solid fa-circle-question"></i></div>
+            <div class="demo-point-body">
+              <strong>Q&amp;A Session</strong>
+              <span>Ask anything — our team will answer all your questions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3 style="margin-bottom: 8px; color: var(--dark);">Request Your Demo</h3>
+        <p style="margin-bottom: 28px; font-size: 0.9rem;">Fill in your details and we'll reach out to schedule a time that works for you.</p>
+        <form id="demoForm" onsubmit="submitDemo(event)">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required aria-describedby="name-error" />
+            <span class="field-error" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="jane@yourorg.com" required aria-describedby="email-error" />
+            <span class="field-error" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="cellphone">Cellphone *</label>
+            <input type="tel" id="cellphone" name="cellphone" placeholder="+27 XX XXX XXXX" required aria-describedby="cellphone-error" />
+            <span class="field-error" id="cellphone-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="organisation">Organisation Name *</label>
+            <input type="text" id="organisation" name="organisation" placeholder="Your organisation" required aria-describedby="organisation-error" />
+            <span class="field-error" id="organisation-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Tell us about your requirements…"></textarea>
+          </div>
+          <button type="submit" id="submitBtn" class="btn btn-primary btn-lg form-submit">Request Demo</button>
+          <p class="form-note">We'll reach out within 1 business day to schedule your demo.</p>
+        </form>
+        <div id="successMessage" style="display:none; text-align:center; padding: 32px 0;">
+          <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #25d366; margin-bottom: 16px; display:block;"></i>
+          <h3 style="color: var(--dark); margin-bottom: 12px;">Demo Request Submitted!</h3>
+          <p>Thank you! Our team will contact you within 24 hours to schedule your demo.</p>
+          <a href="index.html" class="btn btn-primary" style="margin-top: 24px;">Back to Home</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Prefer to Dive Right In?</h2>
+    <p>Sign up and start setting up your event for free — no demo needed.</p>
+    <div class="cta-actions">
+      <a href="https://app.custi.africa/register" class="btn btn-primary btn-lg" target="_blank">Start Event Setup</a>
+      <a href="pricing.html" class="btn btn-ghost btn-lg">View Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon"><i class="fa-solid fa-calendar-days"></i></div>
+          Custi Events
+        </a>
+        <p>The WhatsApp-first event management platform for organisers.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="contact.html">Contact</a>
+        <a href="demo.html">Request Demo</a>
+      </div>
+      <div class="footer-col">
+        <h4>Portal</h4>
+        <a href="https://app.custi.africa" target="_blank">Login</a>
+        <a href="https://app.custi.africa/register" target="_blank">Sign Up</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Custi Events. All rights reserved.</span>
+      <span>event.custi.africa</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  function clearErrors() {
+    document.querySelectorAll('.field-error').forEach(el => el.textContent = '');
+    document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
+  }
+
+  function showError(fieldId, message) {
+    const err = document.getElementById(fieldId + '-error');
+    const input = document.getElementById(fieldId);
+    if (err) err.textContent = message;
+    if (input) input.classList.add('input-error');
+  }
+
+  function submitDemo(event) {
+    event.preventDefault();
+    clearErrors();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const cellphone = document.getElementById('cellphone').value.trim();
+    const organisation = document.getElementById('organisation').value.trim();
+    let valid = true;
+
+    if (!name) { showError('name', 'Name is required'); valid = false; }
+    if (!email) { showError('email', 'Email is required'); valid = false; }
+    else if (!/^\S+@\S+\.\S+$/.test(email)) { showError('email', 'Please enter a valid email address'); valid = false; }
+    if (!cellphone) { showError('cellphone', 'Cellphone is required'); valid = false; }
+    else {
+      const clean = cellphone.replace(/[\s\-\(\)]/g, '');
+      if (!/^(\+266[0-9]{8}|266[0-9]{8}|[0-9]{8}|\+27[0-9]{9}|0[0-9]{9})$/.test(clean)) {
+        showError('cellphone', 'Please enter a valid cellphone number'); valid = false;
+      }
+    }
+    if (!organisation) { showError('organisation', 'Organisation name is required'); valid = false; }
+    if (!valid) return;
+
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Submitting...';
+    btn.disabled = true;
+
+    fetch('send-demo.php', { method: 'POST', body: new FormData(document.getElementById('demoForm')) })
+      .then(r => r.json())
+      .then(data => {
+        if (data.success) {
+          document.getElementById('demoForm').style.display = 'none';
+          document.getElementById('successMessage').style.display = 'block';
+        } else {
+          alert('Failed to send. Please try again or contact us directly.');
+        }
+      })
+      .catch(() => alert('Failed to send. Please try again or contact us directly.'))
+      .finally(() => { btn.textContent = 'Request Demo'; btn.disabled = false; });
+  }
+</script>
+</body>
+</html>

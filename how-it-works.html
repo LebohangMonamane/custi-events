@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works — Custi Events</title>
+  <meta name="description" content="Learn how Custi Events works — from event creation to WhatsApp-powered guest communication in 6 simple steps." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .steps-detailed { display: flex; flex-direction: column; gap: 48px; max-width: 800px; margin: 0 auto; }
+    .step-detailed {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 32px;
+      align-items: flex-start;
+    }
+    .step-detailed-num {
+      width: 64px;
+      height: 64px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .step-detailed-body h3 { font-size: 1.3rem; color: var(--dark); margin-bottom: 10px; }
+    .step-detailed-body p { margin-bottom: 12px; }
+    .step-detail-tag {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+    .connector {
+      width: 2px;
+      height: 48px;
+      background: var(--primary-light);
+      margin: 0 auto;
+      margin-left: 31px;
+    }
+    @media (max-width: 480px) {
+      .step-detailed { grid-template-columns: 56px 1fr; gap: 16px; }
+      .step-detailed-num { width: 48px; height: 48px; font-size: 1.2rem; }
+      .connector { margin-left: 23px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon"><i class="fa-solid fa-calendar-days"></i></div>
+      Custi Events
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="demo.html" class="btn btn-outline btn-sm">Request Demo</a>
+      <a href="https://app.custi.africa" class="btn btn-primary btn-sm" target="_blank">Login / Sign Up</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-actions">
+      <a href="demo.html" class="btn btn-outline">Request Demo</a>
+      <a href="https://app.custi.africa" class="btn btn-primary" target="_blank">Login / Sign Up</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>From Setup to Event Day in 6 Steps</h1>
+    <p>Get your event live on WhatsApp in minutes. Here's exactly how Custi Events works.</p>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="section">
+  <div class="container">
+    <div class="steps-detailed">
+
+      <div class="step-detailed">
+        <div class="step-detailed-num">1</div>
+        <div class="step-detailed-body">
+          <span class="step-detail-tag">Organiser Portal</span>
+          <h3>Create Your Event</h3>
+          <p>Log in to the Custi Events organiser portal and use the guided setup wizard to create your event. Define the event name, type, date, venue, and guest capacity. Choose from event types including weddings, conferences, church events, corporate functions, and more.</p>
+        </div>
+      </div>
+      <div class="connector"></div>
+
+      <div class="step-detailed">
+        <div class="step-detailed-num">2</div>
+        <div class="step-detailed-body">
+          <span class="step-detail-tag">Configuration</span>
+          <h3>Configure Settings</h3>
+          <p>Set up your RSVP rules, messaging preferences, seating configurations, and any custom fields. Configure how guests should respond and what information you need to collect from them.</p>
+        </div>
+      </div>
+      <div class="connector"></div>
+
+      <div class="step-detailed">
+        <div class="step-detailed-num">3</div>
+        <div class="step-detailed-body">
+          <span class="step-detail-tag">WhatsApp Cloud API</span>
+          <h3>Assign a WhatsApp Number</h3>
+          <p>Assign a dedicated WhatsApp number to your event. This number becomes the communication channel for all guest interactions — invitations, RSVPs, announcements, and replies. Powered by the WhatsApp Cloud API.</p>
+        </div>
+      </div>
+      <div class="connector"></div>
+
+      <div class="step-detailed">
+        <div class="step-detailed-num">4</div>
+        <div class="step-detailed-body">
+          <span class="step-detail-tag">Guest Management</span>
+          <h3>Upload Your Guest List</h3>
+          <p>Import your guest list via CSV upload or add guests manually. The system validates your data, flags any issues, and gives you a clean summary before you proceed. Each guest is linked to their WhatsApp number.</p>
+        </div>
+      </div>
+      <div class="connector"></div>
+
+      <div class="step-detailed">
+        <div class="step-detailed-num">5</div>
+        <div class="step-detailed-body">
+          <span class="step-detail-tag">Go Live</span>
+          <h3>Activate Your Event</h3>
+          <p>When you're ready, activate your event. Custi Events sends personalised invitation messages to all guests via WhatsApp instantly. You can monitor delivery, track RSVPs, and manage everything from the portal.</p>
+        </div>
+      </div>
+      <div class="connector"></div>
+
+      <div class="step-detailed">
+        <div class="step-detailed-num">6</div>
+        <div class="step-detailed-body">
+          <span class="step-detail-tag">Guest Experience</span>
+          <h3>Guests Interact via WhatsApp</h3>
+          <p>Guests receive their invitation on WhatsApp and can RSVP, ask questions, and receive updates — all without downloading any app. They simply reply to the WhatsApp message. You see all responses in real time in the organiser portal.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP HIGHLIGHT -->
+<section class="section-sm" style="background: #f8fafc;">
+  <div class="container">
+    <div class="wa-highlight">
+      <div class="wa-highlight-icon"><i class="fa-brands fa-whatsapp"></i></div>
+      <div>
+        <h3>Why WhatsApp?</h3>
+        <p>WhatsApp has over 2 billion users globally. Your guests are already on it. By running your event communication through WhatsApp, you eliminate the need for guest apps, email open rates, and SMS costs — while getting near-instant delivery and read rates.</p>
+        <br />
+        <a href="features.html" class="btn btn-primary" style="margin-top: 8px;">Explore All Features</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to Get Started?</h2>
+    <p>Create your first event for free — no credit card required for up to 10 guests.</p>
+    <div class="cta-actions">
+      <a href="https://app.custi.africa/register" class="btn btn-primary btn-lg" target="_blank">Start Event Setup</a>
+      <a href="demo.html" class="btn btn-ghost btn-lg">Request Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon"><i class="fa-solid fa-calendar-days"></i></div>
+          Custi Events
+        </a>
+        <p>The WhatsApp-first event management platform for organisers.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="contact.html">Contact</a>
+        <a href="demo.html">Request Demo</a>
+      </div>
+      <div class="footer-col">
+        <h4>Portal</h4>
+        <a href="https://app.custi.africa" target="_blank">Login</a>
+        <a href="https://app.custi.africa/register" target="_blank">Sign Up</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Custi Events. All rights reserved.</span>
+      <span>event.custi.africa</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
