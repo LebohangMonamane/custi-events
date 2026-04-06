@@ -61,7 +61,7 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.feature-card, .step-card, .pricing-card').forEach(el => {
+document.querySelectorAll('.feature-card, .feature-rail, .step-card, .pricing-card, .positioning-card, .step-detailed, .workflow-metric, .workflow-panel').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';

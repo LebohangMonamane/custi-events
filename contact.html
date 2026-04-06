@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Custi Events</title>
   <meta name="description" content="Get in touch with the Custi Events team. We're here to help with your event management questions." />
+  <link rel="canonical" href="https://event.custi.africa/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Custi Events" />
+  <meta property="og:title" content="Contact — Custi Events" />
+  <meta property="og:description" content="Get in touch with the Custi Events team. We're here to help with your event management questions." />
+  <meta property="og:url" content="https://event.custi.africa/contact.html" />
+  <meta property="og:image" content="https://event.custi.africa/images/hero.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — Custi Events" />
+  <meta name="twitter:description" content="Get in touch with the Custi Events team. We're here to help with your event management questions." />
+  <meta name="twitter:image" content="https://event.custi.africa/images/hero.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -38,9 +49,19 @@
     }
     .contact-item-body strong { display: block; color: var(--dark); font-size: 0.9rem; margin-bottom: 4px; }
     .contact-item-body span { font-size: 0.875rem; color: var(--text-muted); }
+    .contact-item-body a {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+    .contact-item-body a:hover { color: var(--primary); }
     @media (max-width: 768px) {
       .contact-layout { grid-template-columns: 1fr; gap: 40px; }
     }
+  </style>
+  <style>
+    .field-error { color: #dc3545; font-size: 0.8rem; margin-top: 4px; display: block; }
+    .input-error { border-color: #dc3545 !important; }
   </style>
 </head>
 <body>
@@ -57,10 +78,10 @@
       <li><a href="features.html">Features</a></li>
       <li><a href="how-it-works.html">How It Works</a></li>
       <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="demo.html">Request Demo</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="demo.html" class="btn btn-outline btn-sm">Request Demo</a>
       <a href="https://app.custi.africa" class="btn btn-primary btn-sm" target="_blank">Login / Sign Up</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -72,9 +93,9 @@
     <a href="features.html">Features</a>
     <a href="how-it-works.html">How It Works</a>
     <a href="pricing.html">Pricing</a>
+    <a href="demo.html">Request Demo</a>
     <a href="contact.html">Contact</a>
     <div class="mobile-actions">
-      <a href="demo.html" class="btn btn-outline">Request Demo</a>
       <a href="https://app.custi.africa" class="btn btn-primary" target="_blank">Login / Sign Up</a>
     </div>
   </div>
@@ -101,21 +122,21 @@
           <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
           <div class="contact-item-body">
             <strong>Email</strong>
-            <span>hello@custi.africa</span>
+            <a href="mailto:info@custi.africa">info@custi.africa</a>
           </div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon"><i class="fa-brands fa-whatsapp"></i></div>
           <div class="contact-item-body">
             <strong>WhatsApp Support</strong>
-            <span>Message us on WhatsApp for quick responses</span>
+            <a href="https://wa.me/27872656129?text=Hi%20Custi%20Events%2C%20I%20need%20help%20with%20the%20platform." target="_blank" rel="noopener">Chat on WhatsApp: +27 87 265 6129</a>
           </div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon"><i class="fa-solid fa-globe"></i></div>
           <div class="contact-item-body">
             <strong>Website</strong>
-            <span>event.custi.africa</span>
+            <a href="https://event.custi.africa" target="_blank" rel="noopener">event.custi.africa</a>
           </div>
         </div>
         <div class="contact-item">
@@ -134,20 +155,23 @@
       <div class="form-card">
         <h3 style="margin-bottom: 8px; color: var(--dark);">Send Us a Message</h3>
         <p style="margin-bottom: 28px; font-size: 0.9rem;">Fill in the form and we'll get back to you shortly.</p>
-        <form data-form="contact">
+        <form id="contactForm" onsubmit="submitContact(event)">
           <div class="form-row">
             <div class="form-group">
               <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+              <input type="text" id="firstName" name="firstName" placeholder="Jane" required aria-describedby="firstName-error" />
+              <span class="field-error" id="firstName-error"></span>
             </div>
             <div class="form-group">
               <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" required aria-describedby="lastName-error" />
+              <span class="field-error" id="lastName-error"></span>
             </div>
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required aria-describedby="email-error" />
+            <span class="field-error" id="email-error"></span>
           </div>
           <div class="form-group">
             <label for="subject">Subject</label>
@@ -162,11 +186,18 @@
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us how we can help…" required></textarea>
+            <textarea id="message" name="message" placeholder="Tell us how we can help…" required aria-describedby="message-error"></textarea>
+            <span class="field-error" id="message-error"></span>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg form-submit">Send Message</button>
+          <button type="submit" id="contactSubmitBtn" class="btn btn-primary btn-lg form-submit">Send Message</button>
           <p class="form-note">We respect your privacy and will never share your information.</p>
         </form>
+        <div id="contactSuccessMessage" style="display:none; text-align:center; padding: 32px 0;">
+          <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #25d366; margin-bottom: 16px; display:block;"></i>
+          <h3 style="color: var(--dark); margin-bottom: 12px;">Message Sent!</h3>
+          <p>Thank you. Our team will get back to you within 24 hours.</p>
+          <a href="index.html" class="btn btn-primary" style="margin-top: 24px;">Back to Home</a>
+        </div>
       </div>
 
     </div>
@@ -214,12 +245,63 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Custi Events. All rights reserved.</span>
+      <span>© 2026 Custi Events. All rights reserved.</span>
       <span>event.custi.africa</span>
     </div>
   </div>
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+  function clearErrors() {
+    document.querySelectorAll('.field-error').forEach(el => el.textContent = '');
+    document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
+  }
+
+  function showError(fieldId, message) {
+    const err = document.getElementById(fieldId + '-error');
+    const input = document.getElementById(fieldId);
+    if (err) err.textContent = message;
+    if (input) input.classList.add('input-error');
+  }
+
+  function submitContact(event) {
+    event.preventDefault();
+    clearErrors();
+
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    let valid = true;
+
+    if (!firstName) { showError('firstName', 'First name is required'); valid = false; }
+    if (!lastName) { showError('lastName', 'Last name is required'); valid = false; }
+    if (!email) { showError('email', 'Email is required'); valid = false; }
+    else if (!/^\S+@\S+\.\S+$/.test(email)) { showError('email', 'Please enter a valid email address'); valid = false; }
+    if (!message) { showError('message', 'Message is required'); valid = false; }
+    if (!valid) return;
+
+    const btn = document.getElementById('contactSubmitBtn');
+    btn.textContent = 'Submitting...';
+    btn.disabled = true;
+
+    fetch('send-contact.php', { method: 'POST', body: new FormData(document.getElementById('contactForm')) })
+      .then(r => r.json())
+      .then(data => {
+        if (data.success) {
+          document.getElementById('contactForm').style.display = 'none';
+          document.getElementById('contactSuccessMessage').style.display = 'block';
+        } else {
+          alert(data.message || 'Failed to send. Please try again or contact us directly.');
+        }
+      })
+      .catch(() => alert('Failed to send. Please try again or contact us directly.'))
+      .finally(() => {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+      });
+  }
+</script>
 </body>
 </html>

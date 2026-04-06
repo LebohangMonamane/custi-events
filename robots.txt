@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://event.custi.africa/sitemap.xml

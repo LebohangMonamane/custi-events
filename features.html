@@ -5,10 +5,236 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Features — Custi Events</title>
   <meta name="description" content="Explore all features of Custi Events — event setup wizard, WhatsApp automation, RSVP, seating management, and more." />
+  <link rel="canonical" href="https://event.custi.africa/features.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Custi Events" />
+  <meta property="og:title" content="Features — Custi Events" />
+  <meta property="og:description" content="Explore all features of Custi Events — event setup wizard, WhatsApp automation, RSVP, seating management, and more." />
+  <meta property="og:url" content="https://event.custi.africa/features.html" />
+  <meta property="og:image" content="https://event.custi.africa/images/hero.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Features — Custi Events" />
+  <meta name="twitter:description" content="Explore all features of Custi Events — event setup wizard, WhatsApp automation, RSVP, seating management, and more." />
+  <meta name="twitter:image" content="https://event.custi.africa/images/hero.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .feature-intro {
+      margin-top: -30px;
+      position: relative;
+      z-index: 2;
+    }
+    .feature-intro-panel {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 26px;
+      padding: 30px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at top right, rgba(83, 189, 235, 0.14), transparent 30%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, #f8fbff 100%);
+      border: 1px solid rgba(43, 98, 145, 0.12);
+      box-shadow: 0 24px 56px rgba(15, 23, 42, 0.08);
+    }
+    .feature-intro-copy p {
+      margin-top: 14px;
+      max-width: 52ch;
+      font-size: 0.98rem;
+    }
+    .feature-intro-points {
+      display: grid;
+      gap: 14px;
+      align-content: center;
+    }
+    .feature-intro-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(43, 98, 145, 0.08);
+    }
+    .feature-intro-point i {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary-light);
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .feature-intro-point strong {
+      display: block;
+      color: var(--dark);
+      font-size: 0.92rem;
+      margin-bottom: 2px;
+    }
+    .feature-intro-point span {
+      color: var(--text-muted);
+      font-size: 0.84rem;
+    }
+    .feature-stack {
+      margin-top: 56px;
+    }
+    .feature-stack .section-header {
+      max-width: 760px;
+      margin-bottom: 44px;
+    }
+    .feature-rail-list {
+      max-width: 1120px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(43, 98, 145, 0.08);
+    }
+    .feature-rail {
+      display: grid;
+      grid-template-columns: 76px minmax(0, 1.35fr) minmax(220px, 0.9fr);
+      gap: 24px;
+      align-items: start;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(43, 98, 145, 0.08);
+      transition: transform 0.25s ease;
+    }
+    .feature-rail:hover {
+      transform: translateX(6px);
+    }
+    .feature-rail-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, var(--primary-light) 0%, #dbe8f5 100%);
+      color: var(--primary);
+      font-size: 1.3rem;
+      box-shadow: 0 12px 26px rgba(43, 98, 145, 0.12);
+    }
+    .feature-rail.feature-emphasis .feature-rail-icon {
+      background: linear-gradient(145deg, #e8f7ee 0%, #d8efe2 100%);
+      color: #1e7f57;
+      box-shadow: 0 12px 26px rgba(37, 211, 102, 0.12);
+    }
+    .feature-rail-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .feature-rail-kicker {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(31, 41, 55, 0.45);
+    }
+    .feature-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      border: 1px solid rgba(43, 98, 145, 0.08);
+    }
+    .feature-rail.feature-emphasis .feature-tag {
+      background: #e9f8ef;
+      color: #1e7f57;
+      border-color: rgba(37, 211, 102, 0.12);
+    }
+    .feature-rail h3 {
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      color: var(--dark);
+    }
+    .feature-rail p {
+      font-size: 0.96rem;
+      line-height: 1.72;
+      max-width: 58ch;
+    }
+    .feature-card-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(31, 41, 55, 0.72);
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: rgba(232, 240, 247, 0.62);
+      border-radius: 999px;
+      padding: 8px 14px;
+      width: fit-content;
+      margin-top: 4px;
+    }
+    .feature-card-note i {
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+    .feature-rail.feature-emphasis .feature-card-note {
+      background: rgba(233, 248, 239, 0.92);
+    }
+    .feature-rail.feature-emphasis .feature-card-note i {
+      color: #1e7f57;
+    }
+    .feature-rail-aside {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      min-height: 100%;
+    }
+    .feature-summary {
+      max-width: 780px;
+      margin: 34px auto 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .feature-summary strong {
+      color: var(--dark);
+    }
+    @media (max-width: 900px) {
+      .feature-intro-panel {
+        grid-template-columns: 1fr;
+      }
+      .feature-rail {
+        grid-template-columns: 64px 1fr;
+      }
+      .feature-rail-aside {
+        grid-column: 2;
+        justify-content: flex-start;
+      }
+    }
+    @media (max-width: 480px) {
+      .feature-intro {
+        margin-top: -18px;
+      }
+      .feature-intro-panel {
+        padding: 22px;
+        border-radius: 24px;
+      }
+      .feature-rail {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 24px 0;
+      }
+      .feature-rail-aside {
+        grid-column: auto;
+      }
+      .feature-rail-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -23,10 +249,10 @@
       <li><a href="features.html">Features</a></li>
       <li><a href="how-it-works.html">How It Works</a></li>
       <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="demo.html">Request Demo</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="demo.html" class="btn btn-outline btn-sm">Request Demo</a>
       <a href="https://app.custi.africa" class="btn btn-primary btn-sm" target="_blank">Login / Sign Up</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -38,9 +264,9 @@
     <a href="features.html">Features</a>
     <a href="how-it-works.html">How It Works</a>
     <a href="pricing.html">Pricing</a>
+    <a href="demo.html">Request Demo</a>
     <a href="contact.html">Contact</a>
     <div class="mobile-actions">
-      <a href="demo.html" class="btn btn-outline">Request Demo</a>
       <a href="https://app.custi.africa" class="btn btn-primary" target="_blank">Login / Sign Up</a>
     </div>
   </div>
@@ -54,61 +280,186 @@
   </div>
 </section>
 
+<section class="feature-intro">
+  <div class="container">
+    <div class="feature-intro-panel">
+      <div class="feature-intro-copy">
+        <span class="section-label">Platform Overview</span>
+        <h2>Every feature is built to help organisers set up faster, communicate better, and manage guests with less friction.</h2>
+        <p>Custi Events combines organiser-side controls with a WhatsApp-first guest experience, so you can handle setup, operations, and communication from one place without forcing guests into another app.</p>
+      </div>
+      <div class="feature-intro-points">
+        <div class="feature-intro-point">
+          <i class="fa-solid fa-gauge-high"></i>
+          <div>
+            <strong>Organiser-first controls</strong>
+            <span>Keep setup, guest data, and operations in one portal</span>
+          </div>
+        </div>
+        <div class="feature-intro-point">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div>
+            <strong>WhatsApp-native communication</strong>
+            <span>Let guests respond inside the channel they already use</span>
+          </div>
+        </div>
+        <div class="feature-intro-point">
+          <i class="fa-solid fa-bullhorn"></i>
+          <div>
+            <strong>Built for active event management</strong>
+            <span>Handle announcements, seating, and messaging as the event moves</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CORE FEATURES -->
-<section class="section">
+<section class="section feature-stack">
   <div class="container">
     <div class="section-header">
       <span class="section-label">Core Features</span>
-      <h2>Built for Organisers, Loved by Guests</h2>
-      <p>Every feature is designed to reduce friction for organisers and make the guest experience effortless.</p>
+      <h2>Capabilities That Cover the Full Event Workflow</h2>
+      <p>From first setup to guest replies and team coordination, these are the tools organisers use to run an event smoothly on Custi Events.</p>
     </div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-        <h3>Event Setup Wizard</h3>
-        <p>A guided step-by-step wizard walks you through creating your event — name, date, venue, capacity, categories, and all configuration options.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-brands fa-whatsapp"></i></div>
-        <h3>WhatsApp Number Assignment</h3>
-        <p>Assign a dedicated WhatsApp Cloud API number to your event. All guest interactions flow through this number, keeping everything organised.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
-        <h3>RSVP Automation</h3>
-        <p>Guests receive an invitation via WhatsApp and RSVP with a simple reply. No forms, no apps, no friction — just a message.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-chair"></i></div>
-        <h3>Seating Management</h3>
-        <p>Assign guests to tables and seats from the organiser portal. Import seating plans via CSV or manage them manually.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-bullhorn"></i></div>
-        <h3>Messaging &amp; Announcements</h3>
-        <p>Send targeted messages, event reminders, and announcements to all guests or specific segments — directly via WhatsApp.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-file-arrow-up"></i></div>
-        <h3>Bulk Guest Import</h3>
-        <p>Upload your entire guest list via CSV in seconds. Validate, review, and confirm before sending invitations.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-gauge-high"></i></div>
-        <h3>Organiser Portal</h3>
-        <p>A full-featured web dashboard to manage events, guests, messages, seating, and settings — all in one place.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-paper-plane"></i></div>
-        <h3>Broadcast Messages</h3>
-        <p>Send bulk WhatsApp messages to your entire guest list or filtered groups with a single action.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-user-shield"></i></div>
-        <h3>Role-Based Access</h3>
-        <p>Invite team members with specific roles — administrators, support agents, and more — to collaborate on your event.</p>
-      </div>
+    <div class="feature-rail-list">
+      <article class="feature-rail">
+        <div class="feature-rail-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div class="feature-rail-body">
+          <div class="feature-rail-meta">
+            <span class="feature-rail-kicker">Setup</span>
+            <span class="feature-tag"><i class="fa-solid fa-list-check"></i> Guided Flow</span>
+          </div>
+          <h3>Event Setup Wizard</h3>
+          <p>A guided step-by-step wizard walks you through creating your event — name, date, venue, capacity, categories, and all configuration options.</p>
+        </div>
+        <div class="feature-rail-aside">
+          <div class="feature-card-note"><i class="fa-solid fa-check"></i> Launch with a clean event structure from day one</div>
+        </div>
+      </article>
+
+      <article class="feature-rail feature-emphasis">
+        <div class="feature-rail-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="feature-rail-body">
+          <div class="feature-rail-meta">
+            <span class="feature-rail-kicker">Communication</span>
+            <span class="feature-tag"><i class="fa-brands fa-whatsapp"></i> Event Channel</span>
+          </div>
+          <h3>WhatsApp Number Assignment</h3>
+          <p>Assign a dedicated WhatsApp Cloud API number to your event. All guest interactions flow through this number, keeping everything organised.</p>
+        </div>
+        <div class="feature-rail-aside">
+          <div class="feature-card-note"><i class="fa-solid fa-link"></i> Keep every RSVP and reply connected to one event line</div>
+        </div>
+      </article>
+
+      <article class="feature-rail feature-emphasis">
+        <div class="feature-rail-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="feature-rail-body">
+          <div class="feature-rail-meta">
+            <span class="feature-rail-kicker">Guest Response</span>
+            <span class="feature-tag"><i class="fa-solid fa-reply"></i> Automated RSVP</span>
+          </div>
+          <h3>RSVP Automation</h3>
+          <p>Guests receive an invitation via WhatsApp and RSVP with a simple reply. No forms, no apps, no friction — just a message.</p>
+        </div>
+        <div class="feature-rail-aside">
+          <div class="feature-card-note"><i class="fa-solid fa-bolt"></i> Reduce response friction for every guest</div>
+        </div>
+      </article>
+
+      <article class="feature-rail">
+        <div class="feature-rail-icon"><i class="fa-solid fa-chair"></i></div>
+        <div class="feature-rail-body">
+          <div class="feature-rail-meta">
+            <span class="feature-rail-kicker">Operations</span>
+            <span class="feature-tag"><i class="fa-solid fa-table-list"></i> Seating Control</span>
+          </div>
+          <h3>Seating Management</h3>
+          <p>Assign guests to tables and seats from the organiser portal. Import seating plans via CSV or manage them manually.</p>
+        </div>
+        <div class="feature-rail-aside">
+          <div class="feature-card-note"><i class="fa-solid fa-chair"></i> Move from guest list to seating plan without extra tools</div>
+        </div>
+      </article>
+
+      <article class="feature-rail">
+        <div class="feature-rail-icon"><i class="fa-solid fa-bullhorn"></i></div>
+        <div class="feature-rail-body">
+          <div class="feature-rail-meta">
+            <span class="feature-rail-kicker">Messaging</span>
+            <span class="feature-tag"><i class="fa-solid fa-megaphone"></i> Announcements</span>
+          </div>
+          <h3>Messaging &amp; Announcements</h3>
+          <p>Send targeted messages, event reminders, and announcements to all guests or specific segments — directly via WhatsApp.</p>
+        </div>
+        <div class="feature-rail-aside">
+          <div class="feature-card-note"><i class="fa-solid fa-paper-plane"></i> Keep guests informed before and during the event</div>
+        </div>
+      </article>
+
+      <article class="feature-rail">
+        <div class="feature-rail-icon"><i class="fa-solid fa-file-arrow-up"></i></div>
+        <div class="feature-rail-body">
+          <div class="feature-rail-meta">
+            <span class="feature-rail-kicker">Guest Data</span>
+            <span class="feature-tag"><i class="fa-solid fa-file-csv"></i> Bulk Import</span>
+          </div>
+          <h3>Bulk Guest Import</h3>
+          <p>Upload your entire guest list via CSV in seconds. Validate, review, and confirm before sending invitations.</p>
+        </div>
+        <div class="feature-rail-aside">
+          <div class="feature-card-note"><i class="fa-solid fa-database"></i> Bring existing guest lists into the platform quickly</div>
+        </div>
+      </article>
+
+      <article class="feature-rail">
+        <div class="feature-rail-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <div class="feature-rail-body">
+          <div class="feature-rail-meta">
+            <span class="feature-rail-kicker">Control Center</span>
+            <span class="feature-tag"><i class="fa-solid fa-grid-2"></i> Dashboard</span>
+          </div>
+          <h3>Organiser Portal</h3>
+          <p>A full-featured web dashboard to manage events, guests, messages, seating, and settings — all in one place.</p>
+        </div>
+        <div class="feature-rail-aside">
+          <div class="feature-card-note"><i class="fa-solid fa-layer-group"></i> Manage the full event operation from one workspace</div>
+        </div>
+      </article>
+
+      <article class="feature-rail feature-emphasis">
+        <div class="feature-rail-icon"><i class="fa-solid fa-paper-plane"></i></div>
+        <div class="feature-rail-body">
+          <div class="feature-rail-meta">
+            <span class="feature-rail-kicker">Outreach</span>
+            <span class="feature-tag"><i class="fa-solid fa-share-nodes"></i> Broadcasts</span>
+          </div>
+          <h3>Broadcast Messages</h3>
+          <p>Send bulk WhatsApp messages to your entire guest list or filtered groups with a single action.</p>
+        </div>
+        <div class="feature-rail-aside">
+          <div class="feature-card-note"><i class="fa-solid fa-bullhorn"></i> Reach everyone or target specific guest segments fast</div>
+        </div>
+      </article>
+
+      <article class="feature-rail">
+        <div class="feature-rail-icon"><i class="fa-solid fa-user-shield"></i></div>
+        <div class="feature-rail-body">
+          <div class="feature-rail-meta">
+            <span class="feature-rail-kicker">Team Access</span>
+            <span class="feature-tag"><i class="fa-solid fa-users-gear"></i> Roles</span>
+          </div>
+          <h3>Role-Based Access</h3>
+          <p>Invite team members with specific roles — administrators, support agents, and more — to collaborate on your event.</p>
+        </div>
+        <div class="feature-rail-aside">
+          <div class="feature-card-note"><i class="fa-solid fa-shield-heart"></i> Let teams collaborate without losing control</div>
+        </div>
+      </article>
     </div>
+    <p class="feature-summary"><strong>The result:</strong> organisers get one connected toolkit for setup, messaging, guest operations, and team coordination, all centered around WhatsApp.</p>
   </div>
 </section>
 
@@ -168,7 +519,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Custi Events. All rights reserved.</span>
+      <span>© 2026 Custi Events. All rights reserved.</span>
       <span>event.custi.africa</span>
     </div>
   </div>
