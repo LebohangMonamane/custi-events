@@ -457,7 +457,7 @@ p {
 /* ===== FEATURES GRID ===== */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 24px;
 }
 
@@ -663,7 +663,7 @@ p {
 /* ===== HOW IT WORKS ===== */
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   gap: 32px;
   position: relative;
 }
@@ -695,7 +695,7 @@ p {
 /* ===== PRICING ===== */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 24px;
   max-width: 900px;
   margin: 0 auto;
@@ -1317,7 +1317,12 @@ p {
 
   .cta-band .cta-actions {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+  }
+
+  .cta-band .cta-actions .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .home-feature-head {
