@@ -6,6 +6,12 @@ if (navToggle && mobileNav) {
   navToggle.addEventListener('click', () => {
     mobileNav.classList.toggle('open');
   });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      mobileNav.classList.remove('open');
+    }
+  });
 }
 
 // ===== ACTIVE NAV LINK =====

@@ -53,6 +53,21 @@
     .faq-item:last-child { border-bottom: none; }
     .faq-q { font-weight: 600; color: var(--dark); margin-bottom: 10px; font-size: 1rem; }
     .faq-a { font-size: 0.9rem; }
+    @media (max-width: 768px) {
+      .pricing-compare {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .compare-header,
+      .compare-row {
+        grid-template-columns: 1.4fr 0.8fr 0.8fr;
+        font-size: 0.78rem;
+      }
+      .compare-header div,
+      .compare-row div {
+        padding: 12px 8px;
+      }
+    }
   </style>
 </head>
 <body>
