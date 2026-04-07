@@ -57,6 +57,21 @@
     .field-error { color: #dc3545; font-size: 0.8rem; margin-top: 4px; display: block; }
     .input-error { border-color: #dc3545 !important; }
   </style>
+  <style>
+    .modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.45); z-index: 9999;
+      align-items: center; justify-content: center;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-box {
+      background: #fff; border-radius: 12px; padding: 40px 32px;
+      max-width: 420px; width: 90%; text-align: center; box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+    .modal-box i { font-size: 2.8rem; margin-bottom: 16px; display: block; }
+    .modal-box h3 { margin-bottom: 10px; color: var(--dark); }
+    .modal-box p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px; }
+  </style>
 </head>
 <body>
 
@@ -241,6 +256,16 @@
   </div>
 </footer>
 
+<!-- ERROR DIALOG -->
+<div class="modal-overlay" id="errorModal">
+  <div class="modal-box">
+    <i class="fa-solid fa-circle-xmark" style="color:#dc3545;"></i>
+    <h3>Something Went Wrong</h3>
+    <p>Failed to send your request. Please try again or contact us directly at <a href="mailto:info@custi.africa">info@custi.africa</a>.</p>
+    <button class="btn btn-primary" onclick="document.getElementById('errorModal').classList.remove('active')">Close</button>
+  </div>
+</div>
+
 <script src="js/main.js"></script>
 <script>
   function clearErrors() {
@@ -253,6 +278,10 @@
     const input = document.getElementById(fieldId);
     if (err) err.textContent = message;
     if (input) input.classList.add('input-error');
+  }
+
+  function showDialog(type) {
+    document.getElementById('errorModal').classList.toggle('active', type === 'error');
   }
 
   function submitDemo(event) {
@@ -289,10 +318,10 @@
           document.getElementById('demoForm').style.display = 'none';
           document.getElementById('successMessage').style.display = 'block';
         } else {
-          alert('Failed to send. Please try again or contact us directly.');
+          showDialog('error');
         }
       })
-      .catch(() => alert('Failed to send. Please try again or contact us directly.'))
+      .catch(() => showDialog('error'))
       .finally(() => { btn.textContent = 'Request Demo'; btn.disabled = false; });
   }
 </script>
