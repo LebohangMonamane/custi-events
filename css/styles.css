@@ -1130,11 +1130,17 @@ p {
   margin: 0 auto;
 }
 
-.footer-top {
+.footer-main {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 64px;
   margin-bottom: 48px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
 .footer-brand .nav-logo {
@@ -1145,7 +1151,33 @@ p {
 .footer-brand p {
   font-size: 0.875rem;
   line-height: 1.7;
-  max-width: 280px;
+  max-width: 300px;
+  margin-bottom: 24px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.6);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.footer-socials a:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
 }
 
 .footer-col h4 {
@@ -1179,12 +1211,20 @@ p {
   font-size: 0.82rem;
 }
 
-.footer-bottom a {
-  color: rgba(255, 255, 255, 0.5);
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.footer-bottom a:hover {
-  color: #53bdeb;
+@media (max-width: 480px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ===== TOAST ===== */
