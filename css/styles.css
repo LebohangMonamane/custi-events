@@ -860,6 +860,14 @@ p {
   margin-bottom: 2px;
 }
 
+.pricing-bundle span {
+  display: block;
+}
+
+.pricing-bundle span + span {
+  margin-top: 6px;
+}
+
 .currency-selector {
   display: inline-flex;
   align-items: center;
